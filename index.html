@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="id" class="h-full">
+<html lang="en" class="h-full">
  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -312,14 +312,14 @@
                 <span class="text-xs font-semibold px-3 py-1 rounded-full" style="background-color: ${primaryColor}20; color: ${primaryColor}">Week 24</span>
               </div>
               <h2 class="text-lg font-bold mb-1" style="color: ${textColor}">${welcomeTitle}</h2>
-              <p class="text-sm" style="color: ${textColor}; opacity: 0.7">Pendamping kesehatan ibu hamil berbasis IoT</p>
+              <p class="text-sm" style="color: ${textColor}; opacity: 0.7">Your personal IoT-based maternal health companion</p>
               <div class="flex gap-2 mt-4">
                 <div class="flex-1 bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl p-3 text-center">
-                  <p class="text-xs" style="color: ${textColor}; opacity: 0.7">Berat Badan</p>
+                  <p class="text-xs" style="color: ${textColor}; opacity: 0.7">Body Weight</p>
                   <p class="text-lg font-bold" style="color: ${secondaryColor}">58 kg</p>
                 </div>
                 <div class="flex-1 bg-gradient-to-r from-pink-50 to-pink-100 rounded-xl p-3 text-center">
-                  <p class="text-xs" style="color: ${textColor}; opacity: 0.7">Tekanan Darah</p>
+                  <p class="text-xs" style="color: ${textColor}; opacity: 0.7">Blood Pressure</p>
                   <p class="text-lg font-bold" style="color: ${primaryColor}">120/80</p>
                 </div>
               </div>
@@ -330,16 +330,16 @@
           <div class="mb-6">
             <h3 class="text-lg font-bold mb-4" style="color: ${textColor}">📋 Daily Checklist</h3>
             <div class="space-y-3">
-              ${renderChecklistItem('anc', '📅', 'Jadwal ANC', 'Kontrol rutin bulan ini', primaryColor, textColor)}
-              ${renderChecklistItem('water', '💧', 'Minum Air', 'Target: 8 gelas/hari', secondaryColor, textColor)}
-              ${renderChecklistItem('vitamin', '💊', 'Vitamin Prenatal', 'Setelah sarapan', primaryColor, textColor)}
+              ${renderChecklistItem('anc', '📅', 'ANC Schedule', 'Monthly check-up this month', primaryColor, textColor)}
+              ${renderChecklistItem('water', '💧', 'Drink Water', 'Target: 8 glasses per day', secondaryColor, textColor)}
+              ${renderChecklistItem('vitamin', '💊', 'Prenatal Vitamin', 'After breakfast', primaryColor, textColor)}
             </div>
           </div>
 
           <!-- Quick Tips -->
           <div class="bg-white rounded-3xl p-5 shadow-lg mb-6">
-            <h3 class="text-lg font-bold mb-3" style="color: ${textColor}">💡 Tips Hari Ini</h3>
-            <p class="text-sm" style="color: ${textColor}; opacity: 0.8">Jalan kaki 15-30 menit setiap hari dapat membantu melancarkan sirkulasi darah dan mempersiapkan tubuh untuk persalinan.</p>
+            <h3 class="text-lg font-bold mb-3" style="color: ${textColor}">💡 Today's Tip</h3>
+            <p class="text-sm" style="color: ${textColor}; opacity: 0.8">Walking 15-30 minutes daily helps improve blood circulation and prepares your body for a healthy delivery.</p>
           </div>
 
           <!-- Doctor Illustration -->
@@ -392,7 +392,7 @@
           <!-- Header -->
           <div class="text-center mb-6 pt-2">
             <h1 class="text-2xl font-bold" style="color: ${textColor}">❤️ Health Monitor</h1>
-            <p class="text-sm" style="color: ${textColor}; opacity: 0.7">Pantau kesehatan Mama & Bayi</p>
+            <p class="text-sm" style="color: ${textColor}; opacity: 0.7">Monitor your health & baby's vitals</p>
           </div>
 
           ${alertActive ? `
@@ -400,12 +400,12 @@
               <div class="flex items-center gap-3">
                 <span class="text-3xl">⚠️</span>
                 <div>
-                  <p class="font-bold">Perhatian!</p>
-                  <p class="text-sm">Detak jantung tidak stabil, tarik nafas dalam-dalam.</p>
+                  <p class="font-bold">Alert!</p>
+                  <p class="text-sm">Heart rate unstable. Take deep breaths.</p>
                 </div>
               </div>
               <button onclick="dismissAlert()" class="btn-press w-full mt-3 bg-white text-red-500 font-semibold py-2 rounded-xl">
-                Saya Sudah Tenang
+                I'm Okay Now
               </button>
             </div>
           ` : ''}
@@ -425,7 +425,7 @@
               <p class="text-5xl font-bold mt-2" style="color: ${secondaryColor}" id="bpm-display">${bpm}</p>
               <p class="text-sm font-medium" style="color: ${textColor}; opacity: 0.7">BPM (Beats Per Minute)</p>
               <p class="text-xs mt-2 px-4 py-1 rounded-full inline-block" style="background-color: ${bpm >= 60 && bpm <= 100 ? '#10B98120' : '#EF444420'}; color: ${bpm >= 60 && bpm <= 100 ? '#10B981' : '#EF4444'}">
-                ${bpm >= 60 && bpm <= 100 ? '✓ Normal Range' : '⚠ Perlu Perhatian'}
+                ${bpm >= 60 && bpm <= 100 ? '✓ Normal Range' : '⚠ Needs Attention'}
               </p>
             </div>
           </div>
@@ -446,18 +446,18 @@
             <div class="bg-white rounded-2xl p-4 shadow-lg text-center">
               <span class="text-3xl">🩺</span>
               <p class="text-2xl font-bold mt-1" style="color: ${secondaryColor}">120/80</p>
-              <p class="text-xs" style="color: ${textColor}; opacity: 0.7">Tekanan Darah</p>
+              <p class="text-xs" style="color: ${textColor}; opacity: 0.7">Blood Pressure</p>
             </div>
             <div class="bg-white rounded-2xl p-4 shadow-lg text-center">
               <span class="text-3xl">🌡️</span>
               <p class="text-2xl font-bold mt-1" style="color: ${secondaryColor}">36.5°C</p>
-              <p class="text-xs" style="color: ${textColor}; opacity: 0.7">Suhu Tubuh</p>
+              <p class="text-xs" style="color: ${textColor}; opacity: 0.7">Body Temperature</p>
             </div>
           </div>
 
           <!-- Alert Test Button -->
           <button onclick="testAlert()" class="btn-press w-full py-4 rounded-2xl font-bold text-white shadow-lg mb-6" style="background: linear-gradient(135deg, ${primaryColor}, #EC4899)">
-            🔔 Tes Alert Darurat
+            🔔 Test Emergency Alert
           </button>
         </div>
       `;
@@ -499,7 +499,7 @@
           <!-- Header -->
           <div class="text-center mb-6 pt-2">
             <h1 class="text-2xl font-bold" style="color: ${textColor}">🏃‍♀️ Activity Tracker</h1>
-            <p class="text-sm" style="color: ${textColor}; opacity: 0.7">Pantau aktivitas harian Mama</p>
+            <p class="text-sm" style="color: ${textColor}; opacity: 0.7">Monitor your daily activity level</p>
           </div>
 
           ${steps >= 8000 ? `
@@ -507,8 +507,8 @@
               <div class="flex items-center gap-3">
                 <span class="text-3xl">🎉</span>
                 <div>
-                  <p class="font-bold">Hebat, Mama!</p>
-                  <p class="text-sm">Tapi jangan lupa istirahat ya, Ma. Kesehatan Mama & bayi yang utama!</p>
+                  <p class="font-bold">Excellent, Mom!</p>
+                  <p class="text-sm">But don't forget to rest too. Your health and baby's health come first!</p>
                 </div>
               </div>
             </div>
@@ -538,20 +538,20 @@
                 <div class="absolute inset-0 flex flex-col items-center justify-center">
                   <span class="text-4xl mb-1">👣</span>
                   <p class="text-3xl font-bold" style="color: ${secondaryColor}">${steps.toLocaleString()}</p>
-                  <p class="text-sm" style="color: ${textColor}; opacity: 0.7">/ ${goal.toLocaleString()} langkah</p>
+                  <p class="text-sm" style="color: ${textColor}; opacity: 0.7">/ ${goal.toLocaleString()} steps</p>
                 </div>
               </div>
             </div>
             
             <div class="text-center">
-              <p class="text-lg font-semibold" style="color: ${textColor}">${Math.round(progress)}% Target Tercapai</p>
-              <p class="text-sm" style="color: ${textColor}; opacity: 0.7">${goal - steps > 0 ? `${(goal - steps).toLocaleString()} langkah lagi!` : 'Target tercapai! 🎉'}</p>
+              <p class="text-lg font-semibold" style="color: ${textColor}">${Math.round(progress)}% Goal Reached</p>
+              <p class="text-sm" style="color: ${textColor}; opacity: 0.7">${goal - steps > 0 ? `${(goal - steps).toLocaleString()} steps to go!` : 'Goal achieved! 🎉'}</p>
             </div>
           </div>
 
           <!-- Simulate Button -->
           <button onclick="addSteps()" class="btn-press w-full py-4 rounded-2xl font-bold text-white shadow-lg mb-6" style="background: linear-gradient(135deg, ${secondaryColor}, #60A5FA)">
-            👟 Simulasikan Jalan Kaki (+500 langkah)
+            👟 Simulate Walking (+500 steps)
           </button>
 
           <!-- Stats -->
@@ -559,7 +559,7 @@
             <div class="bg-white rounded-2xl p-4 shadow-lg text-center">
               <span class="text-2xl">🔥</span>
               <p class="text-xl font-bold mt-1" style="color: ${primaryColor}">${Math.round(steps * 0.04)}</p>
-              <p class="text-xs" style="color: ${textColor}; opacity: 0.7">Kalori</p>
+              <p class="text-xs" style="color: ${textColor}; opacity: 0.7">Calories</p>
             </div>
             <div class="bg-white rounded-2xl p-4 shadow-lg text-center">
               <span class="text-2xl">📏</span>
@@ -569,13 +569,13 @@
             <div class="bg-white rounded-2xl p-4 shadow-lg text-center">
               <span class="text-2xl">⏱️</span>
               <p class="text-xl font-bold mt-1" style="color: ${primaryColor}">${Math.round(steps / 100)}</p>
-              <p class="text-xs" style="color: ${textColor}; opacity: 0.7">Menit</p>
+              <p class="text-xs" style="color: ${textColor}; opacity: 0.7">Minutes</p>
             </div>
           </div>
 
           <!-- Reset Button -->
           <button onclick="resetSteps()" class="btn-press w-full py-3 rounded-2xl font-semibold border-2 mb-6" style="border-color: ${textColor}30; color: ${textColor}">
-            🔄 Reset Langkah
+            🔄 Reset Steps
           </button>
         </div>
       `;
@@ -598,7 +598,7 @@
       const secondaryColor = config.secondary_color || defaultConfig.secondary_color;
       
       const today = new Date();
-      const month = today.toLocaleString('id-ID', { month: 'long' });
+      const monthName = today.toLocaleString('en-US', { month: 'long' });
       const year = today.getFullYear();
       
       // Generate calendar days
@@ -634,20 +634,20 @@
           <!-- Header -->
           <div class="text-center mb-6 pt-2">
             <h1 class="text-2xl font-bold" style="color: ${textColor}">📅 ANC Schedule</h1>
-            <p class="text-sm" style="color: ${textColor}; opacity: 0.7">Jadwal kontrol kehamilan</p>
+            <p class="text-sm" style="color: ${textColor}; opacity: 0.7">Your prenatal care schedule</p>
           </div>
 
           <!-- Calendar -->
           <div class="bg-white rounded-3xl p-5 shadow-lg mb-6">
             <div class="flex justify-between items-center mb-4">
-              <h3 class="font-bold text-lg" style="color: ${textColor}">${month} ${year}</h3>
+              <h3 class="font-bold text-lg" style="color: ${textColor}">${monthName} ${year}</h3>
               <div class="flex gap-2">
-                <span class="text-xs px-2 py-1 rounded-full" style="background-color: ${primaryColor}20; color: ${primaryColor}">● Hari ini</span>
+                <span class="text-xs px-2 py-1 rounded-full" style="background-color: ${primaryColor}20; color: ${primaryColor}">● Today</span>
                 <span class="text-xs px-2 py-1 rounded-full" style="background-color: ${secondaryColor}20; color: ${secondaryColor}">● ANC</span>
               </div>
             </div>
             <div class="grid grid-cols-7 gap-1 text-center mb-2">
-              ${['Min', 'Sen', 'Sel', 'Rab', 'Kam', 'Jum', 'Sab'].map(d => `<div class="text-xs font-semibold py-2" style="color: ${textColor}; opacity: 0.5">${d}</div>`).join('')}
+              ${['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map(d => `<div class="text-xs font-semibold py-2" style="color: ${textColor}; opacity: 0.5">${d}</div>`).join('')}
             </div>
             <div class="grid grid-cols-7 gap-1">
               ${calendarDays}
@@ -656,7 +656,7 @@
 
           <!-- Upcoming Schedule -->
           <div class="mb-6">
-            <h3 class="font-bold text-lg mb-4" style="color: ${textColor}">📋 Jadwal Mendatang</h3>
+            <h3 class="font-bold text-lg mb-4" style="color: ${textColor}">📋 Upcoming Appointments</h3>
             <div class="space-y-3">
               <div class="card-hover bg-white rounded-2xl p-4 shadow-lg flex items-center gap-4">
                 <div class="w-14 h-14 rounded-xl flex flex-col items-center justify-center" style="background-color: ${secondaryColor}20">
@@ -664,8 +664,8 @@
                   <span class="text-xs" style="color: ${secondaryColor}">Jan</span>
                 </div>
                 <div class="flex-1">
-                  <p class="font-semibold" style="color: ${textColor}">Kontrol ANC Rutin</p>
-                  <p class="text-xs" style="color: ${textColor}; opacity: 0.6">RS Bunda Medika • 09:00 WIB</p>
+                  <p class="font-semibold" style="color: ${textColor}">Routine ANC Check</p>
+                  <p class="text-xs" style="color: ${textColor}; opacity: 0.6">Bunda Medical • 09:00 AM</p>
                 </div>
                 <span class="text-2xl">👩‍⚕️</span>
               </div>
@@ -675,8 +675,8 @@
                   <span class="text-xs" style="color: ${primaryColor}">Jan</span>
                 </div>
                 <div class="flex-1">
-                  <p class="font-semibold" style="color: ${textColor}">USG 4D</p>
-                  <p class="text-xs" style="color: ${textColor}; opacity: 0.6">Klinik Ibu & Anak • 10:30 WIB</p>
+                  <p class="font-semibold" style="color: ${textColor}">4D Ultrasound</p>
+                  <p class="text-xs" style="color: ${textColor}; opacity: 0.6">Mother & Child Clinic • 10:30 AM</p>
                 </div>
                 <span class="text-2xl">🩻</span>
               </div>
@@ -685,15 +685,15 @@
 
           <!-- Tips Articles -->
           <div class="mb-6">
-            <h3 class="font-bold text-lg mb-4" style="color: ${textColor}">📚 Tips Kehamilan</h3>
+            <h3 class="font-bold text-lg mb-4" style="color: ${textColor}">📚 Pregnancy Tips</h3>
             <div class="space-y-3">
               <div class="card-hover bg-white rounded-2xl p-4 shadow-lg">
                 <div class="flex items-start gap-3">
                   <span class="text-3xl">🤰</span>
                   <div>
-                    <p class="font-semibold" style="color: ${textColor}">Minggu ke-24: Perkembangan Janin</p>
-                    <p class="text-xs mt-1" style="color: ${textColor}; opacity: 0.7">Bayi Mama sekarang seukuran jagung! Sistem pendengaran sudah berkembang dan mulai merespon suara.</p>
-                    <span class="inline-block mt-2 text-xs font-semibold" style="color: ${secondaryColor}">Baca selengkapnya →</span>
+                    <p class="font-semibold" style="color: ${textColor}">Week 24: Baby Development</p>
+                    <p class="text-xs mt-1" style="color: ${textColor}; opacity: 0.7">Your baby is now the size of corn! The hearing system is developing and baby starts responding to sounds.</p>
+                    <span class="inline-block mt-2 text-xs font-semibold" style="color: ${secondaryColor}">Read more →</span>
                   </div>
                 </div>
               </div>
@@ -701,9 +701,9 @@
                 <div class="flex items-start gap-3">
                   <span class="text-3xl">🥗</span>
                   <div>
-                    <p class="font-semibold" style="color: ${textColor}">Nutrisi Penting Trimester 2</p>
-                    <p class="text-xs mt-1" style="color: ${textColor}; opacity: 0.7">Zat besi, kalsium, dan asam folat sangat penting untuk pertumbuhan tulang dan otak bayi.</p>
-                    <span class="inline-block mt-2 text-xs font-semibold" style="color: ${secondaryColor}">Baca selengkapnya →</span>
+                    <p class="font-semibold" style="color: ${textColor}">Important Nutrients in 2nd Trimester</p>
+                    <p class="text-xs mt-1" style="color: ${textColor}; opacity: 0.7">Iron, calcium, and folic acid are essential for baby's bone and brain development. Include these in your diet daily.</p>
+                    <span class="inline-block mt-2 text-xs font-semibold" style="color: ${secondaryColor}">Read more →</span>
                   </div>
                 </div>
               </div>
@@ -711,9 +711,9 @@
                 <div class="flex items-start gap-3">
                   <span class="text-3xl">🧘‍♀️</span>
                   <div>
-                    <p class="font-semibold" style="color: ${textColor}">Olahraga Aman untuk Bumil</p>
-                    <p class="text-xs mt-1" style="color: ${textColor}; opacity: 0.7">Yoga prenatal dan jalan santai adalah pilihan terbaik untuk menjaga kebugaran selama hamil.</p>
-                    <span class="inline-block mt-2 text-xs font-semibold" style="color: ${secondaryColor}">Baca selengkapnya →</span>
+                    <p class="font-semibold" style="color: ${textColor}">Safe Exercise During Pregnancy</p>
+                    <p class="text-xs mt-1" style="color: ${textColor}; opacity: 0.7">Prenatal yoga and light walking are excellent choices to maintain fitness and prepare your body for labor.</p>
+                    <span class="inline-block mt-2 text-xs font-semibold" style="color: ${secondaryColor}">Read more →</span>
                   </div>
                 </div>
               </div>
@@ -726,5 +726,5 @@
     // Initialize app
     renderCurrentScreen();
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9cb0f05702654038',t:'MTc3MDYxNDY0OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9cb22ae983e3fd1c',t:'MTc3MDYyNzUzNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
